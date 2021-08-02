@@ -9,6 +9,8 @@ class Image extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id'];
+
     //Polymorphic relationship
     public function imageable(){
         return $this->morphTo();

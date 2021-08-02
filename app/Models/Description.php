@@ -9,6 +9,8 @@ class Description extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id'];
+
     //Relationship one to one inverse
     public function lesson(){
         return $this->belongsTo('App\Models\lesson');

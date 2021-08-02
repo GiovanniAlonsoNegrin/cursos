@@ -9,6 +9,8 @@ class Requirement extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id'];
+
     //Relationship one to many inverse
     public function course(){
         return $this->belongsTo('App\Models\Course');

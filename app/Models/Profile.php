@@ -9,6 +9,8 @@ class Profile extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id'];
+
     //Relationship one to one inverse
     public function user(){
         return $this->blongsTo('App\Models\User');

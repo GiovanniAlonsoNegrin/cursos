@@ -9,6 +9,8 @@ class Comment extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id'];
+
     //Inverse one to many relationship
     public function user(){
         return $this->belongsTo('App\Models\User');

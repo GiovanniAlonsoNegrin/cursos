@@ -9,6 +9,8 @@ class Course extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id', 'status'];
+
     const ERASER = 1;
     const REVISE = 2;
     const PUBLISHED = 3;

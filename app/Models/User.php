@@ -64,12 +64,19 @@ class User extends Authenticatable
         return $this->hasOne('App\Models\Profile');
     }
 
-    //One to many relationship(Teachers - Courses)
+    //One to many relationship
+    //(Teachers - Courses)
     public function courses_dictated(){
         return $this->hasMany('App\Models\Course');
     }
     public function reviews(){
         return $this->hasMany('App\Models\Review');
+    }
+    public function comments(){
+        return $this->hasMany('App\Models\Comment');
+    }
+    public function reactions(){
+        return $this->hasMany('App\Models\Reaction');
     }
 
     //Many to many relationship

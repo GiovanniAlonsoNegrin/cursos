@@ -86,7 +86,7 @@
             <aside class="hidden lg:block">
                 @foreach($similars as $similar)
                     <article class="flex mb-6">
-                        <img class="h-32 w-45 object-cover rounded" src="{{ Storage::url($similar->image->url) }}" alt="img">
+                        <img class="h-24 w-36 object-cover rounded flex-none" src="{{ Storage::url($similar->image->url) }}" alt="img">
                         <div class="ml-3">
                             <h1>
                                 <a class="font-bold text-gray-500 mb-3" href="{{ route('courses.show', $similar) }}">{{ Str::limit($similar->title, 40) }}</a>

@@ -10,13 +10,14 @@ use App\Models\User;
 class AdminUserTable extends DataTableComponent
 {
     public bool $columnSelect = true;
+    public bool $showFilters  = false;
 
     public bool $addButtonEnabled = true;
-    public $addTheTag       = 'button';
-    public $addAttributtes = [
-        'type'        => 'button',
-        'data-target' => '#'
+    public $addTheTag       = 'a';
+    public $addAttributes = [
+        'href'        => 'admin.roles.index',
     ];
+    public $contentA = 'Crear usuario';
 
     public function columns(): array
     {
@@ -47,9 +48,9 @@ class AdminUserTable extends DataTableComponent
         return 'livewire-tables.rows.admin_user_table';
     }
 
-    public function userDelete()
+    public function button()
     {
-        return User::delete();
+        return redirect()->route('admin.roles.index');
     }
 
 }

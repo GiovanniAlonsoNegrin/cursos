@@ -20,7 +20,7 @@
     <x-livewire-tables::table.cell>
         <div>
             <a href="{{ route('admin.users.edit', $row) }}" class="text-primary ml-1"><i class="fas fa-user-tag fa-lg"></i></i></a>
-            <a href="#" wire:click="userDelete" class="text-danger ml-1"><i class="fas fa-trash-alt fa-lg"></i></a>
+            <a href="#" class="text-danger ml-1"><i class="fas fa-trash-alt fa-lg"></i></a>
         </div>
     </x-livewire-tables::table.cell>
 @endif

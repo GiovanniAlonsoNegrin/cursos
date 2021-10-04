@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    {{--@livewire('admin.admin-users')--}}
+    {{--@livewire('admin.users-index')--}}
     @livewire('admin.admin-user-table')
 @stop
 

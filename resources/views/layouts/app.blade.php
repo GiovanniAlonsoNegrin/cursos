@@ -36,32 +36,13 @@
             </main>
         </div>
 
-        <div id="ubicacion">
-            Tus coordenadas aparecerán aquí
-        </div>
-
         @stack('modals')
 
         @livewireScripts
 
-        <script>
-            window.onload = miUbicacion;
+        @isset($js)
+            {{ $js }}
+        @endisset
 
-            function miUbicacion(){
-                //Si los servicios de geolocalización están disponibles
-                if(navigator.geolocation){
-                    // Para obtener la ubicación actual llama getCurrentPosition.
-                    navigator.geolocation.getCurrentPosition( muestraMiUbicacion );
-                }else{ //de lo contrario
-                    alert("Los servicios de geolocalizaci\363n  no est\341n disponibles");
-                }
-            }
-            function muestraMiUbicacion(posicion){
-                var latitud = posicion.coords.latitude
-                var longitud = posicion.coords.longitude
-                var output = document.getElementById("ubicacion");
-                output.innerHTML = "Latitud: "+latitud+"  Longitud: "+longitud;
-            }
-        </script>
     </body>
 </html>

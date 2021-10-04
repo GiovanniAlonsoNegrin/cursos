@@ -249,19 +249,22 @@ return [
         [
             'text'        => 'Dashboard',
             'route'       => 'admin.home',
-            'icon'        => 'fas fa-fw fa-tachometer-alt'
+            'icon'        => 'fas fa-fw fa-tachometer-alt',
+            'can'         => 'Ver dashboard',
         ],
         [
             'text'        => 'Lista de roles',
             'route'       => 'admin.roles.index',
             'icon'        => 'fas fa-fw fa-user-cog',
             'active'      => ['admin/roles*'],
+            'can'         => 'Ver rol',
         ],
         [
             'text'        => 'Ususarios',
             'route'       => 'admin.users.index',
             'icon'        => 'fas fa-fw fa-users',
             'active'      => ['admin/users*'],
+            'can'         => 'Ver usuarios',
         ],
         ['header' => 'account_settings'],
         [
